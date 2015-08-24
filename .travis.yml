@@ -3,6 +3,8 @@ php:
 - 5.4
 - 5.3
 before_install:
+- openssl aes-256-cbc -K $encrypted_1286c0f43aed_key -iv $encrypted_1286c0f43aed_iv
+  -in inuad.enc -out inuad -d
 - echo $foo
 - openssl aes-256-cbc -K $encrypted_2e1bf3931c22_key -iv $encrypted_2e1bf3931c22_iv
   -in inuad.pem.enc -out inuad.pem -d
