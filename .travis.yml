@@ -2,6 +2,8 @@ language: php
 php:
 - 5.4
 - 5.3
+addons:
+  ssh_known_hosts: $HOST_IP
 before_install:
 - openssl aes-256-cbc -k "$PEM" -in deploy_key.enc -out deploy_key -d
 env:
@@ -15,4 +17,3 @@ after_success:
 - ssh-add ~/.ssh/id_rsa
 - git remote add deploy $DEPLOY_URL
 - git push deploy master
-- yes /r/n
