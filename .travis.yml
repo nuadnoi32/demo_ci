@@ -10,5 +10,5 @@ env:
 after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
-- git remote add deploy ssh://git@github.com:nuadnoi32/demo_ci.git
-- git push deploy
+- ssh $HOST
+- ls
