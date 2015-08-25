@@ -13,5 +13,5 @@ after_success:
 - chmod 600 ~/.ssh/id_rsa
 - eval "$(ssh-agent -s)"
 - ssh-add ~/.ssh/id_rsa
-- git remote add deploy ssh://git@github.com:nuadnoi32/demo_ci.git
+- git remote add deploy $DEPLOY_URL
 - git push deploy
