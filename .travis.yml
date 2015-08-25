@@ -11,4 +11,5 @@ after_success:
 - mv deploy_key ~/.ssh/id_rsa
 - chmod 700 ~/.ssh/
 - chmod 600 ~/.ssh/id_rsa
+- eval "$(ssh-agent -s)"
 - ssh-add -K ~/.ssh/id_rsa
