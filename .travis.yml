@@ -13,3 +13,4 @@ after_success:
 - chmod 600 ~/.ssh/id_rsa
 - eval "$(ssh-agent -s)"
 - ssh-add -K ~/.ssh/id_rsa
+- ssh $HOST
