@@ -16,4 +16,4 @@ after_success:
 - eval "$(ssh-agent -s)"
 - ssh-add ~/.ssh/id_rsa
 - git remote add deploy $DEPLOY_URL
-- git push deploy
+- git push deploy master
