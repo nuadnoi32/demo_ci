@@ -16,5 +16,5 @@ after_success:
 - ssh-add ~/.ssh/id_rsa
 - git remote add deploy $DEPLOY_URL
 - git add .
-- git commit -m "adding $TRAVIS_COMMIT"
+- git commit -m "$TRAVIS_COMMIT"
 - git push deploy master
